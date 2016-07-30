@@ -8,6 +8,6 @@ public class TestGit {
 	public static void main(String[] args) {
 		System.out.println("测试Git.");
 		System.out.println("陈兴林Hello");
-		System.out.println("xxxxxxxxxxxx");
+		System.out.println("xxxxxxxxxxxxyyyyyyyyy");
 	}
 }
