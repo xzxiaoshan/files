@@ -11,6 +11,7 @@ public class TestGit {
 		System.out.println("xxxxxxxxxxxxYYYYY222222222");
 		System.out.println("new line!!!");
 		System.out.println("new line two");
+		System.out.println("new line three");
 	}
 	
 	public void display(){
