@@ -1,0 +1,70 @@
+{
+   "cap_add" : null,
+   "cap_drop" : null,
+   "cmd" : "python -m homeassistant --config /config",
+   "cpu_priority" : 50,
+   "devices" : null,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : false,
+   "enabled" : false,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "LANG",
+         "value" : "C.UTF-8"
+      },
+      {
+         "key" : "GPG_KEY",
+         "value" : "0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D"
+      },
+      {
+         "key" : "PYTHON_VERSION",
+         "value" : "3.7.2"
+      },
+      {
+         "key" : "PYTHON_PIP_VERSION",
+         "value" : "19.0.3"
+      },
+      {
+         "key" : "value",
+         "value" : "Asia/Shanghai"
+      },
+      {
+         "key" : "variable",
+         "value" : "TZ"
+      }
+   ],
+   "exporting" : false,
+   "id" : "7b345b7a8d291f2a6547e778ca36bc028dd6852740ea89324a6cee10988dfb22",
+   "image" : "homeassistant/home-assistant:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "homeassistant",
+   "network" : [
+      {
+         "driver" : "host",
+         "name" : "host"
+      }
+   ],
+   "network_mode" : "host",
+   "port_bindings" : [],
+   "privileged" : false,
+   "shortcut" : {
+      "enable_shortcut" : false
+   },
+   "ulimits" : null,
+   "use_host_network" : true,
+   "volume_bindings" : [
+      {
+         "host_volume_file" : "/docker/homeassistant",
+         "mount_point" : "/config",
+         "type" : "rw"
+      }
+   ],
+   "volumes_from" : null
+}

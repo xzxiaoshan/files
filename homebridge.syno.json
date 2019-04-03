@@ -1,0 +1,62 @@
+{
+   "cap_add" : null,
+   "cap_drop" : null,
+   "cmd" : "/root/run.sh",
+   "cpu_priority" : 50,
+   "devices" : null,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : false,
+   "enabled" : false,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "NODE_VERSION",
+         "value" : "10.11.0"
+      },
+      {
+         "key" : "YARN_VERSION",
+         "value" : "1.9.4"
+      },
+      {
+         "key" : "DEBIAN_FRONTEND",
+         "value" : "noninteractive"
+      },
+      {
+         "key" : "TERM",
+         "value" : "xterm"
+      }
+   ],
+   "exporting" : false,
+   "id" : "858d4fedd9eaf275ae46481fd163a635a2d7eb698df37b05b06592d153865f20",
+   "image" : "marcoraddatz/homebridge:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "homebridge",
+   "network" : [
+      {
+         "driver" : "host",
+         "name" : "host"
+      }
+   ],
+   "network_mode" : "host",
+   "port_bindings" : [],
+   "privileged" : false,
+   "shortcut" : {
+      "enable_shortcut" : false
+   },
+   "ulimits" : null,
+   "use_host_network" : true,
+   "volume_bindings" : [
+      {
+         "host_volume_file" : "/docker/homebridge",
+         "mount_point" : "/root/.homebridge",
+         "type" : "rw"
+      }
+   ],
+   "volumes_from" : null
+}

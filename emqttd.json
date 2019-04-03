@@ -1,0 +1,76 @@
+{
+   "cap_add" : null,
+   "cap_drop" : null,
+   "cmd" : "/opt/emqttd/start.sh",
+   "cpu_priority" : 50,
+   "devices" : null,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : false,
+   "enabled" : false,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "EMQ_VERSION",
+         "value" : "v2.3.11"
+      }
+   ],
+   "exporting" : false,
+   "id" : "f0315eed23b30928d26ff43038774e3316208dbd3a938960b360e0dc90fee12e",
+   "image" : "xzxiaoshan/emqttd-docker-v2.3.11:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "emqttd",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "bridge"
+      }
+   ],
+   "network_mode" : "bridge",
+   "port_bindings" : [
+      {
+         "container_port" : 18083,
+         "host_port" : 18083,
+         "type" : "tcp"
+      },
+      {
+         "container_port" : 1883,
+         "host_port" : 1883,
+         "type" : "tcp"
+      },
+      {
+         "container_port" : 8083,
+         "host_port" : 8083,
+         "type" : "tcp"
+      },
+      {
+         "container_port" : 8084,
+         "host_port" : 8084,
+         "type" : "tcp"
+      },
+      {
+         "container_port" : 8883,
+         "host_port" : 8883,
+         "type" : "tcp"
+      }
+   ],
+   "privileged" : true,
+   "shortcut" : {
+      "enable_shortcut" : false
+   },
+   "ulimits" : null,
+   "use_host_network" : false,
+   "volume_bindings" : [
+      {
+         "host_volume_file" : "/docker/emqttd/localtime",
+         "mount_point" : "/etc/localtime",
+         "type" : "rw"
+      }
+   ],
+   "volumes_from" : null
+}
