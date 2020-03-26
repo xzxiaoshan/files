@@ -1,4 +1,4 @@
-### Docker搭建v2ray+websocket(nginx)+tls
+### [Docker搭建v2ray+websocket(nginx)+tls](https://github.com/xzxiaoshan/files/raw/master/v2ray/v2%2Bws%2Btls-docker.mp4)
 
 本例环境：谷歌云CentOS 8  
 
@@ -13,7 +13,7 @@ dnf config-manager --add-repo=http://mirrors.aliyun.com/docker-ce/linux/centos/d
 && chmod +x /usr/local/bin/docker-compose \
 && mkdir -p /opt/soft \
 && cd $_ \
-&& wget https://github.com/xzxiaoshan/files/raw/master/v2ray-pkg.tar.gz \
+&& wget https://github.com/xzxiaoshan/files/raw/master/v2ray/v2ray-pkg.tar.gz \
 && tar -zxvf v2ray-pkg.tar.gz \
 && mv v2ray-pkg v2ray \
 && cd v2ray
@@ -30,17 +30,17 @@ docker-compose up -d
 ```
 
 #### 四、其他  
-客户端ID和信息，在config.json文件的clients中配置。  
-BBR加速命令`wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh`
+客户端ID和信息，在config.json文件的clients中配置。   
+BBR加速命令`wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh`  
 安装完成后，脚本会提示需要重启，输入 y 并回车后重启。重启完成后，验证一下是否成功安装最新内核并开启`TCP BBR`，输入命令`lsmod | grep bbr`如果出现tcp_bbr字样表示bbr已安装并启动成功。  
 
-**其他链接** 
-[windows客户端](https://github.com/2dust/v2rayN)
-[Android客户端](https://github.com/2dust/v2rayNG/releases)
-[操作视频]()
-[客户端配置](https://www.shawnlin.cn/v2ray-client/)
-[UUID在线生成](https://www.uuidgenerator.net/)
-[官网](https://www.v2ray.com/)
+**其他链接**  
+[windows客户端](https://github.com/2dust/v2rayN)  
+[Android客户端](https://github.com/2dust/v2rayNG/releases)  
+[操作视频](https://github.com/xzxiaoshan/files/raw/master/v2ray/v2%2Bws%2Btls-docker.mp4)  
+[客户端配置](https://www.shawnlin.cn/v2ray-client/)  
+[UUID在线生成](https://www.uuidgenerator.net/)  
+[官网](https://www.v2ray.com/)  
 
 ---
 
