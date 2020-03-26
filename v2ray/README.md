@@ -18,6 +18,7 @@ dnf config-manager --add-repo=http://mirrors.aliyun.com/docker-ce/linux/centos/d
 && mv v2ray-pkg v2ray \
 && cd v2ray
 ```
+dnf是CentOS8的包管理工具，如果你是CentOS7把dnf换成yum就可以了。  
 
 #### 二、修改配置文件  
 将域名解析到你的服务器IP地址，例如本例域名：v2ray.wegeyun.com  
