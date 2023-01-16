@@ -24,7 +24,7 @@ function curl_get($url) {
     curl_close($ch);
     return  $output;
 }
-function outYaml($fileName,$content){
+function outFile($fileName,$content){
     header('Content-Description: File Transfer');
 
     header('Content-Type: application/octet-stream');
@@ -76,7 +76,7 @@ $file_content = curl_get($subscribeUrl);
 //4.输出yaml文件内容
 
 // print($subscribeUrl);
-outYaml($res_file_name, $file_content);
+outFile($res_file_name, $file_content);
 // print($file_content);
 
 ?>
