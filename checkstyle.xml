@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+        "https://checkstyle.org/dtds/configuration_1_3.dtd">
+<!--
+    This configuration file was written by the eclipse-cs plugin configuration editor
+-->
+<!--
+    Checkstyle-Configuration: CTP
+    Description: none
+-->
+<module name="Checker">
+  <property name="severity" value="error"/>
+  <property name="charset" value="UTF-8" />
+
+  <!-- 检查样式抑制
+  <module name="SuppressionFilter">
+    <property name="file" value="scripts/pipeline/suppressions.xml"/>
+  </module>
+   -->
+
+  <!-- 长度方面的检查 -->
+  <module name="LineLength">
+    <property name="max" value="150"/>
+    <property name="tabWidth" value="4"/>
+  </module>
+
+  <module name="TreeWalker">
+    <module name="JavadocMethod">
+      <!--<property name="suppressLoadErrors" value="true"/>-->
+      <!--<property name="allowUndeclaredRTE" value="true"/>-->
+      <!--<property name="allowMissingPropertyJavadoc" value="true"/>-->
+    </module>
+    <module name="MissingJavadocMethod" />
+    <module name="NonEmptyAtclauseDescription" />
+    <module name="JavadocVariable"/>
+    <module name="JavadocStyle">
+      <property name="checkEmptyJavadoc" value="true" />
+      <property name="checkFirstSentence" value="false" />
+      <property name="checkHtml" value="false" />
+      <message key="javadoc.missing" value="空白注释，请确保注释中至少留有一行为纯中文功能描述注释"/>
+    </module>
+    <module name="JavadocType">
+      <property name="scope" value="public" />
+      <property name="allowMissingParamTags" value="true" />
+      <property name="allowUnknownTags" value="true" />
+      <property name="authorFormat" value="[\u4e00-\u9fa5]" />
+      <message key="javadoc.missing" value="类注释:缺少Javadoc注释.或者作者格式没按照 @author +中文姓名 来注释"/>
+    </module>
+    <module name="AnnotationUseStyle">
+      <property name="elementStyle" value="ignore" />
+      <property name="trailingArrayComma" value="ignore" />
+      <property name="closingParens" value="ignore" />
+    </module>
+    <module name="AvoidStarImport">
+      <property name="severity" value="error"/>
+      <message key="import.avoidStar" value="请不要使用''.*''进行import - {0}."/>
+    </module>
+    <!--module name="MultipleStringLiterals"/-->
+    <!--module name="MultipleVariableDeclarations"/-->
+    <module name="NestedTryDepth">
+      <property name="max" value="3"/>
+    </module>
+    <!-- clone方法必须调用了super.clone() -->
+    <!--module name="SuperClone"/-->
+    <!-- finalize 必须调用了super.finalize() -->
+    <!--module name="SuperFinalize"/-->
+    <!-- switch要有default -->
+    <module name="DefaultComesLast"/>
+    <!--module name="ParameterNumber">
+      <message key="maxParam" value="参数太多 ，共{1,number,integer}个，最好不要超过 {0,number,integer}个。"/>
+    </module-->
+    <!-- 类名(class 或interface) 的检查 -->
+    <module name="TypeName" />
+    <!-- 变量的检查 -->
+    <module name="MemberName" />
+    <!-- 方法名的检查 -->
+    <module name="MethodName" />
+    <!-- 常量名的检查 -->
+    <module name="ConstantName" />
+    <module name="MethodLength">
+      <property name="tokens" value="METHOD_DEF" />
+      <property name="max" value="150" />
+    </module>
+    <!-- 方法的参数个数不超过3个。 -->
+    <module name="ParameterNumber">
+      <property name="max" value="15" />
+    </module>
+    <module name="EmptyBlock"/>
+    <module name="EmptyStatement"/>
+    <module name="InnerAssignment"/>
+    <!-- 所有区域都要使用大括号。 -->
+    <module name="NeedBraces" />
+    <module name="UpperEll">
+      <metadata name="net.sf.eclipsecs.core.comment" value="使用大写L，l和1太像"/>
+      <property name="severity" value="error"/>
+    </module>
+    <module name="NestedIfDepth">
+      <property name="max" value="3" />
+    </module>
+    <module name="NestedTryDepth">
+      <property name="max" value="3" />
+    </module>
+    <module name="NestedForDepth">
+      <property name="max" value="3" />
+    </module>
+    <!-- 同一行不能有多个声明 -->
+    <module name="MultipleVariableDeclarations" />
+    <!--module name="ParameterNumber">
+      <property name="severity" value="error"/>
+    </module-->
+    <!--module name="CyclomaticComplexity"/-->
+    <module name="StringLiteralEquality">
+      <metadata name="net.sf.eclipsecs.core.comment" value="String比较请使用equals"/>
+      <property name="severity" value="error"/>
+      <message key="string.literal.equality" value="String比较请使用equals(), 而不是 ''{0}''."/>
+    </module>
+    <module name="ParameterAssignment">
+      <metadata name="net.sf.eclipsecs.core.comment" value="方法参数不允许赋值"/>
+      <property name="severity" value="error"/>
+      <message key="parameter.assignment" value="请不要对方法的参数赋值：''{0}''"/>
+    </module>
+    <!--module name="ModifiedControlVariable">
+      <metadata name="net.sf.eclipsecs.core.comment" value="不允许修改循环控制变量"/>
+      <property name="severity" value="error"/>
+    </module-->
+    <!--module name="ReturnCount">
+      <metadata name="net.sf.eclipsecs.core.comment" value="方法最多允许3个return"/>
+      <property name="severity" value="error"/>
+      <property name="max" value="4"/>
+    </module-->
+  </module>
+  <module name="RegexpSingleline">
+    <metadata name="net.sf.eclipsecs.core.comment" value="不允许使用System.out.print"/>
+    <property name="severity" value="error"/>
+    <property name="format" value="System\.out\.print"/>
+    <property name="message" value="不允许使用System.out.print，请使用log输出"/>
+  </module>
+</module>
